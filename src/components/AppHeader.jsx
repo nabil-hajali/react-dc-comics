@@ -1,24 +1,27 @@
-import dcLogo from '/dc-logo.png'
+import dcLogo from '../public/dc-logo.png';
 
 
-export default function AppHeader(){
+export default function AppHeader() {
 
-    
-    return(
+
+    return (
         <header>
-            <img src="{reactLogo}" alt="" />
-            <nav>
-                <a href="">characters</a>
-                <a href="">comics</a>
-                <a href="">movies</a>
-                <a href="">tv</a>
-                <a href="">games</a>
-                <a href="">collectibles</a>
-                <a href="">videos</a>
-                <a href="">fans/a>
-                <a href="">news</a>
-                <a href="">shop</a>
+            <div className="container d-flex justify-content-between align-items-center">
+           <img src={dcLogo} alt="" />
+            <nav className='d-flex gap-4'>
+                <a className='text-uppercase'>characters</a>
+                <a className='text-uppercase'>comics</a>
+                <a className='text-uppercase'>movies</a>
+                <a className='text-uppercase'>tv</a>
+                <a className='text-uppercase'>games</a>
+                <a className='text-uppercase'>collectibles</a>
+                <a className='text-uppercase'>videos</a>
+                <a className='text-uppercase'>fans</a>
+                <a className='text-uppercase'>news</a>
+                <a className='text-uppercase'>shop</a>
+                 
             </nav>
+        </div>
         </header>
     )
 }

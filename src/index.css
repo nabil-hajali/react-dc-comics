@@ -1,7 +1,31 @@
-@import url('bootstrap');
+ @import url('bootstrap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+ font-family: 'Open Sans Variable', sans-serif;
+}
+header{
+  background-color: white;
+  font-weight: 700;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+footer{
+ 
+  background-image: url('public/footer-bg.jpg'); 
+
+}
+ 
