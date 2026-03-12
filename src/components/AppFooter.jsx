@@ -80,4 +80,8 @@ export default function AppFooter() {
             </section>
         </footer>
     )
-}
+} 
+
+products.map(products => {
+    <AppCard title={products.title} image={products.src} time={products.time} type={products.key} key={products.id} />
+})

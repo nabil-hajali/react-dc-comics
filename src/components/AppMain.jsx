@@ -3,42 +3,65 @@ import merchandise from '../public/buy-comics-merchandise.png'
 import subscriptions from '../public/buy-comics-subscriptions.png'
 import shop from '../public/buy-comics-shop-locator.png'
 import visa from '../public/buy-dc-power-visa.svg'
+import comics from './comics'
+
 
 export default function AppMain() {
-    return (
-        <main>
-            <section className="bg-dark text-white py-4">
+     <main>
+            <div className="jumbotron"></div>
+            <section className="bg-dark text-white px-5 pb-4">
+                <span className="series bg-primary p-2 px-4">CURRENT SERIES</span>
                 <div className="container">
-                    <div className="row">
-                        <h5 className="col-5">--Content goes here--</h5></div>
-                </div>
-            </section>
+                    <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 row-cols-xl-6 rounded-0 m-5">
 
-            <section className="container bg-primary">
-                <div className="row d-flex align-items-center justify-content-center">
-                    <div className="col text-light">
-                        <img src={digital} alt="logo" width="40px" className="mx-2"></img>
-                        DIGITAL COMICS
+                        {comics.map((comic) => {
+                            return (
+                                <div className="col col-sm-5 col-md-4 col-lg-3" key={comic.id}>
+                                    <div className="card-body">
+                                        <img src={comic.thumb} className="img-card card-img-top" />
+                                        <div className="col text-uppercase card-title p-2">{comic.series}</div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    
+                        )}
+
                     </div>
-                    <div className="col text-light">
-                        <img src={merchandise} alt="merchandise" width="40px" className="mx-2"></img>
-                        DC MERCHANDISE
-                    </div>
-                    <div className="col text-light">
-                        <img src={subscriptions} alt="merchandise" width="40px" className="mx-2"></img>
-                        SUBSCRIPTION
-                    </div>
-                    <div className="col text-light">
-                        <img src={shop} alt="merchandise" width="30px" className="mx-2"></img>
-                        COMIC SHOP LOCATOR
-                    </div>
-                    <div className="col text-light">
-                        <img src={visa} alt="merchandise" width="40px" className="mx-2"></img>
-                        DC POWER VISA
+                    <div className="text-center">
+                        <span className="bg-primary p-2 px-5">LOAD MORE</span>
                     </div>
                 </div>
             </section>
 
-        </main>
-    )
-}
+
+
+
+                    <section className="container bg-primary">
+                        <div className="row d-flex align-items-center justify-content-center">
+                            <div className="col text-light">
+                                <img src={digital} alt="logo" width="40px" className="mx-2"></img>
+                                DIGITAL COMICS
+                            </div>
+                            <div className="col text-light">
+                                <img src={merchandise} alt="merchandise" width="40px" className="mx-2"></img>
+                                DC MERCHANDISE
+                            </div>
+                            <div className="col text-light">
+                                <img src={subscriptions} alt="merchandise" width="40px" className="mx-2"></img>
+                                SUBSCRIPTION
+                            </div>
+                            <div className="col text-light">
+                                <img src={shop} alt="merchandise" width="30px" className="mx-2"></img>
+                                COMIC SHOP LOCATOR
+                            </div>
+                            <div className="col text-light">
+                                <img src={visa} alt="merchandise" width="40px" className="mx-2"></img>
+                                DC POWER VISA
+                            </div>
+                        </div>
+                    </section>
+
+                </main>
+
+     }
